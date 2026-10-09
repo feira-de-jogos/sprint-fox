@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - './**'
   workflow_dispatch: {}
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}/rest-api
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-and-push:
